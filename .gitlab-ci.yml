@@ -1,0 +1,22 @@
+stages:
+    - release-note
+    - deploy
+
+
+release-note-check:
+    stage: release-note
+    script:
+        - release-notes
+    only:
+      - tags
+    except:
+      - branches
+
+hello:
+    stage: deploy
+    script:
+        - echo "hello world"
+    only:
+      - tags
+    except:
+      - branches
