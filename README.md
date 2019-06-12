@@ -4,11 +4,11 @@ The giltab release-notes checker is a simple cli for gitlab-ci to prevent deploy
 
 ### How Release-Notes checker works
 
-The giltab release-notes checker gets enviroment variabeles and configs from `config.py`.
-in `config.py` we have `PRIVATE_TOKEN` and `GITLAB_URL` that most set by user in `config.py`.
-`CI_PROJECT_ID` and `CI_COMMIT_TAG` is sets automaticly by gitlab-runner to enviroment varibale.
+The giltab release-notes checker gets environment variables and configs from `config.py`.
+in `config.py` we have `PRIVATE_TOKEN` and `GITLAB_URL` that must set by user in `config.py`.
+`CI_PROJECT_ID` and `CI_COMMIT_TAG` is set automatically by gitlab-runner to environment variables.
 
-giltab release-notes checks current tag in gitlab-runner match with the tag in release page and  print release notes to pipline output. 
+giltab release-notes checks current tag in gitlab-runner match with the tag in release page and print release notes to pipeline output. 
 
 ### installation 
 
@@ -32,7 +32,7 @@ link the project to /usr/bin/
 
 ``` ln -s /opt/release-note/release-notes.py /usr/bin/release-notes ```
 
-and finaly using `.gitlab-ci.yaml` example in repository. 
+and finally using `.gitlab-ci.yaml` example in repository. 
 
 ### In The End
 if you using this tool please consider giving it a star! ⭐
